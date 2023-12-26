@@ -6,7 +6,7 @@ GATA1.Gata1.cor.heatmap.png		GATA1.Gata1.cor.heatmap.png.cor.mat.txt
 
 - The NMF results are saved in the `NMF_reconstruction_GATA1_Gata1` folder
 ```
->>> ls NMF_reconstruction_GATA1_Gata1
+>>> ls /output_folder/test_cormat_NMF_FDR_pipeline_GATA1_Gata1/NMF_reconstruction_GATA1_Gata1
 GATA1.Gata1.NMFs.num.BIC.pdf				GATA1.cor.mat.txt.NMFs.hg38.binary_FDRbgadj.txt
 GATA1.Gata1.cross_factor_cor_mat.pdf			Gata1.NMFs.num.BIC.pdf
 GATA1.Gata1.cross_factor_cor_mat.txt			Gata1.cor.heatmap.png.cor.mat.txt.NMFs.mm10.heatmap.png
@@ -14,8 +14,42 @@ GATA1.cor.heatmap.png.cor.mat.txt.NMFs.hg38.heatmap.png	Gata1.cor.mat.txt.NMFs.m
 GATA1.cor.mat.txt.NMFs.hg38.binary_FDRbgadj.heatmap.png	Gata1.cor.mat.txt.NMFs.mm10.binary_FDRbgadj.txt
 ```
 
+- The heatmaps of NMF decomposition matrices in the two species are saved in `NMF_reconstruction_GATA1_Gata1/GATA1.cor.heatmap.png.cor.mat.txt.NMFs.hg38.heatmap.png` and `NMF_reconstruction_GATA1_Gata1/Gata1.cor.heatmap.png.cor.mat.txt.NMFs.mm10.heatmap.png`. 
+```
+ls /output_folder/test_cormat_NMF_FDR_pipeline_GATA1_Gata1/NMF_reconstruction_GATA1_Gata1/*.cor.heatmap.png.cor.mat.txt.NMFs.*png 
+NMF_reconstruction_GATA1_Gata1/GATA1.cor.heatmap.png.cor.mat.txt.NMFs.hg38.heatmap.png
+NMF_reconstruction_GATA1_Gata1/Gata1.cor.heatmap.png.cor.mat.txt.NMFs.mm10.heatmap.png
+```
 
-
+- The binary heatmap of the identified highly correlated regions based NMF decomposition matrices (FDR-based threshold) in the two species are saved in `NMF_reconstruction_GATA1_Gata1/GATA1.cor.mat.txt.NMFs.hg38.binary_FDRbgadj.heatmap.png` and `NMF_reconstruction_GATA1_Gata1/Gata1.cor.mat.txt.NMFs.mm10.binary_FDRbgadj.heatmap.png`. The corresponding matrices `.txt` are saved in `GATA1.cor.mat.txt.NMFs.hg38.binary_FDRbgadj.txt` and `Gata1.cor.mat.txt.NMFs.mm10.binary_FDRbgadj.txt`. Each row represents a genomic bin in Human / Mouse. Each column represents a NMF factor.
+```
+>>> # Human gene's FDR high correlation calls
+>>> head GATA1.cor.mat.txt.NMFs.hg38.binary_FDRbgadj.txt
+H_chrX_48760000_48760200	0	0	0	0	0	0
+H_chrX_48760200_48760400	0	0	0	0	0	0
+H_chrX_48760400_48760600	0	0	0	0	0	0
+H_chrX_48760600_48760800	0	0	0	0	0	0
+H_chrX_48760800_48761000	0	0	0	0	0	0
+H_chrX_48761000_48761200	0	0	0	0	0	0
+H_chrX_48761200_48761400	0	0	0	0	0	0
+H_chrX_48761400_48761600	0	0	0	0	0	0
+H_chrX_48761600_48761800	0	0	0	0	0	0
+H_chrX_48761800_48762000	0	0	0	0	0	0
+```
+```
+>>> # Mouse gene's FDR high correlation calls
+>>> head Gata1.cor.mat.txt.NMFs.mm10.binary_FDRbgadj.txt 
+M_chrX_7915000_7915200	0	0	0	0	0	0
+M_chrX_7915200_7915400	0	0	0	0	0	0
+M_chrX_7915400_7915600	0	0	0	0	0	0
+M_chrX_7915600_7915800	0	0	0	0	0	0
+M_chrX_7915800_7916000	0	0	0	0	0	0
+M_chrX_7916000_7916200	0	0	0	0	0	0
+M_chrX_7916200_7916400	0	0	0	0	0	0
+M_chrX_7916400_7916600	0	0	0	0	0	0
+M_chrX_7916600_7916800	0	0	0	0	0	0
+M_chrX_7916800_7917000	0	0	0	0	0	0
+```
 
 - The `hg38.gene.GATA1.matched_ct.state.bed` and `mm10.gene.Gata1.matched_ct.state.bed` contains the cross-cell-type epigenetic state labels at the Human / Mouse gene locus. 
 ```
