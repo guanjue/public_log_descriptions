@@ -96,7 +96,8 @@ chr1	966482	975865	+	PLEKHN1
 chr1	975204	982093	-	PERM1
 chr1	998962	1000172	-	HES4
 chr1	1001138	1014540	+	ISG15
-
+```
+```
 >>> # Mouse genes in mm10 genome
 >>> head input_files/mm10.gene.bed 
 chr1	3205901	3671498	-	Xkr4
